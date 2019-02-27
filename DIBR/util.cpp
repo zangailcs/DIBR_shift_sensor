@@ -1,6 +1,8 @@
 #include "util.h"
 void depthpreprocess(IplImage *depth)  //深度图预处理
 {
+	int imageHeight = depth->height, imageWidth = depth->width;
+
 	cv::Mat srcDepth(depth);
 
 	int **dir = new int*[imageHeight];
